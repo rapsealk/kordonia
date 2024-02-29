@@ -1,0 +1,4 @@
+aiohttp~=3.9.3  # https://github.com/aio-libs/aiohttp
+aiohttp-cors~=0.7.0  # https://github.com/aio-libs/aiohttp-cors
+aiohttp-sse~=2.1.0  # https://github.com/aio-libs/aiohttp-sse
+redis[hiredis]~=5.0.1  # https://github.com/redis/redis-py

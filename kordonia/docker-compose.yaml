@@ -1,0 +1,20 @@
+version: "3.4"
+
+services:
+  aiohttp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: kordonia/aiohttp:0.1.0-dev0
+    container_name: kordonia-aiohttp
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis
+  redis:
+    image: redis:6.2.14-alpine
+    container_name: kordonia-redis
+    restart: unless-stopped
+    ports:
+      - 6379:6379
